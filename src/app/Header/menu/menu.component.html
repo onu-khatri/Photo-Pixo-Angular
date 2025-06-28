@@ -1,1 +1,31 @@
-<p>menu works!</p>
+<nav>
+  <ul id="m-menu">
+    <div id="logo-wraper">
+      <img src="assets/images/logo.png" alt="logo" />
+    </div>
+
+    <div id="item-wraper">
+      @for (item of m_items; let i = $index; track $index) {
+        <div class="menu-item"
+             (mouseenter)="showid(i, item)"
+             (mouseleave)="hideid(i, item)">
+
+          <div class="menu-label">
+            <li>{{ item.label }}</li>
+            @if(item.children?.length){
+                <i class="fas fa-chevron-down"></i>
+            }
+          </div>
+
+          @if (hoveredIndex === i && item.children?.length) {
+            <ul class="submenu">
+              @for (child of item.children; let j = $index; track $index) {
+                <li class="child-data">{{ child.label }}</li>
+              }
+            </ul>
+          }
+        </div>
+      }
+    </div>
+  </ul>
+</nav>
