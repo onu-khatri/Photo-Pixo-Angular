@@ -52,7 +52,7 @@ export const menuItems: MenuItem[] = [
     label: 'Photographers',
     link: '/photographers',
     icon: 'photographers',
-    children:[
+    children: [
       {
         label: 'All Photographers',
         link: '/photographers/all',
@@ -77,14 +77,14 @@ export const menuItems: MenuItem[] = [
         label: 'Ambassadors',
         link: '/photographers/ambassadors',
         icon: 'ambassadors',
-      }
-    ]
+      },
+    ],
   },
   {
     label: 'Quest',
     link: '/quest',
     icon: 'quest',
-    children:[
+    children: [
       {
         label: 'Global Award',
         link: '/quest/global-award',
@@ -104,21 +104,28 @@ export const menuItems: MenuItem[] = [
         label: 'Licensing',
         link: '/quest/licensing',
         icon: 'licensing',
-      }
-    ]
+      },
+    ],
   },
   {
     label: 'Licensing',
     link: '/licensing',
     icon: 'licensing',
-    children:[
+    children: [
       {
         label: 'About Licensing',
         link: '/licensing/about-licensing',
         icon: 'about-licensing',
+        children: [
+          {
+            label: 'About Mr',
+            link: '/licensing/about-licensing',
+            icon: 'about-licensing',
+          },
+        ],
       },
       {
-        label:'Become a Contributor',
+        label: 'Become a Contributor',
         link: '/licensing/become-a-contributor',
         icon: 'become-a-contributor',
       },
@@ -141,8 +148,8 @@ export const menuItems: MenuItem[] = [
         label: 'Commerical Grants',
         link: '/licensing/commercial-grants',
         icon: 'commercial-grants',
-      }
-    ]
+      },
+    ],
   },
   {
     label: 'Blog',
@@ -152,7 +159,6 @@ export const menuItems: MenuItem[] = [
   {
     label: 'Memberships',
     link: '/memberships',
-    icon: 'memberships'
-  }
-
+    icon: 'memberships',
+  },
 ];

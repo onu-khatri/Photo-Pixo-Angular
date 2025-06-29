@@ -1,31 +1,25 @@
 <nav>
-  <ul id="m-menu">
-    <div id="logo-wraper">
-      <img src="assets/images/logo.png" alt="logo" />
-    </div>
+  <ul class="m-menu">
+    @if (menuList().length) {
+      <div class="item-wraper">
+        @for (item of menuList(); let itemIndex = $index; track $index) {
+          <div class="menu-item" (mouseenter)="showid(itemIndex)" (mouseleave)="hideid()">
+            <!-- main menu component -->
+            <app-label [menu_data]="item"></app-label>
 
-    <div id="item-wraper">
-      @for (item of m_items; let i = $index; track $index) {
-        <div class="menu-item"
-             (mouseenter)="showid(i, item)"
-             (mouseleave)="hideid(i, item)">
-
-          <div class="menu-label">
-            <li>{{ item.label }}</li>
-            @if(item.children?.length){
-                <i class="fas fa-chevron-down"></i>
+            <!-- sub menu -->
+            @if (hoveredIndex === itemIndex && item.children?.length) {
+              <ul class="submenu">
+                <app-menu [menuList]="item.children || []" />
+              </ul>
             }
-          </div>
 
-          @if (hoveredIndex === i && item.children?.length) {
-            <ul class="submenu">
-              @for (child of item.children; let j = $index; track $index) {
-                <li class="child-data">{{ child.label }}</li>
-              }
-            </ul>
-          }
-        </div>
-      }
-    </div>
+            <!-- submenu component -->
+            <!-- <app-menu-item [menu_list]="item.children?.[0]" [menu_index]="itemIndex"></app-menu-item> -->
+            <!-- problem create here -->
+          </div>
+        }
+      </div>
+    }
   </ul>
 </nav>
