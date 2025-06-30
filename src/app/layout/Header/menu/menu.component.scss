@@ -21,30 +21,9 @@
   gap: 5px;
   cursor: pointer;
 }
-.submenu {
-  transition: opacity 0.2s ease;
-  opacity: 1;
-}
+
 .menu-item:hover .submenu {
   opacity: 1;
-}
-.submenu {
-  min-width: 180px;
-  border-radius: 4px;
-}
-
-.submenu {
-  position: absolute;
-
-  // display:block;
-  top: 100%;
-  left: 0;
-  background: white;
-
-  list-style: none;
-  padding: 8px 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  z-index: 999;
 }
 
 .child-data {
@@ -79,7 +58,7 @@
 
 /* Show submenu on hover */
 .menu-item:hover .submenu {
-  display: flex;
+  display: block;
   animation: fadeIn 0.2s ease-in-out;
 }
 
@@ -101,6 +80,7 @@
     opacity: 0;
     transform: translateY(-4px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -116,4 +96,54 @@
   .child-data {
     padding: 10px;
   }
+}
+
+.submenu {
+  transition: opacity 0.2s ease;
+  opacity: 1;
+  word-wrap: break-word;
+  word-break: keep-all;
+  border-radius: 4px;
+  position: absolute;
+  top: 100%;
+  left: 20%;
+  padding-left: 0px;
+  font-size: medium;
+  list-style: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+  margin-left: 0px;
+}
+
+.submenu .item-wraper {
+  display: block;
+  background-color: rgb(255, 255, 255);
+  // here change the submenu bg color
+  border-radius: 8px;
+  min-width: 180px;
+  margin-top: 10px;
+}
+
+.submenu .m-menu .item-wraper .menu-item {
+  padding: 10px 10px 12px;
+  word-break: break-all;
+  border-bottom: 1px solid rgb(218, 218, 218);
+}
+
+.submenu .m-menu .item-wraper .menu-item:first-child {
+  border-top: 1px solid rgb(218, 218, 218);
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.submenu .m-menu .item-wraper .menu-item:last-child {
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.submenu .m-menu .item-wraper .menu-item:hover {
+  background-color: rgb(217, 217, 217);
+  transition: all 0.2s ease-in-out;
+  color: rgb(0, 28, 188);
+  text-decoration: underline;
 }

@@ -116,13 +116,6 @@ export const menuItems: MenuItem[] = [
         label: 'About Licensing',
         link: '/licensing/about-licensing',
         icon: 'about-licensing',
-        children: [
-          {
-            label: 'About Mr',
-            link: '/licensing/about-licensing',
-            icon: 'about-licensing',
-          },
-        ],
       },
       {
         label: 'Become a Contributor',
