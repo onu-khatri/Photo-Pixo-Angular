@@ -1,0 +1,21 @@
+<nav>
+  <ul class="m-menu">
+    @if (menuList().length) {
+      <div class="item-wraper">
+        @for (item of menuList(); let itemIndex = $index; track $index) {
+          <div class="menu-item" (mouseenter)="showid(itemIndex)" (mouseleave)="hideid()">
+            <!-- main menu component -->
+            <app-label [menu_data]="item"></app-label>
+
+            <!-- sub menu -->
+            @if (hoveredIndex === itemIndex && item.children?.length) {
+              <ul class="submenu">
+                <app-menu [menuList]="item.children || []" />
+              </ul>
+            }
+          </div>
+        }
+      </div>
+    }
+  </ul>
+</nav>
