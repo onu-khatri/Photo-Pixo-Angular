@@ -1,4 +1,4 @@
-import { Component, input, OnInit } from '@angular/core';
+import { Component, input } from '@angular/core';
 
 @Component({
   selector: 'app-banner',
@@ -6,13 +6,13 @@ import { Component, input, OnInit } from '@angular/core';
   templateUrl: './banner.component.html',
   styleUrls: ['./banner.component.scss'],
 })
-export class BannerComponent implements OnInit {
+export class BannerComponent {
   // default_url = 'assets/images/deafult-banner.jpg';
   img_url = input.required<string>();
   img_width = input<string>();
   img_height = input<string>();
-  ngOnInit() {
-    console.log('image url= ' + this.img_url());
-    console.log('width= ' + this.img_width() + ' height= ' + this.img_height());
-  }
+  // ngOnInit() {
+  //   console.log('image url= ' + this.img_url());
+  //   console.log('width= ' + this.img_width() + ' height= ' + this.img_height());
+  // }
 }

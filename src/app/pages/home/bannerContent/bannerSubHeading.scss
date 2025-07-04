@@ -3,3 +3,8 @@
   color: rgb(255, 255, 255);
   margin-top: 0px;
 }
+@media screen and (max-width: 1075px) {
+  .banner-text {
+    padding-left: 10px;
+  }
+}
