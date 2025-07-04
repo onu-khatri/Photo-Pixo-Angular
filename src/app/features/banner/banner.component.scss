@@ -1,7 +1,12 @@
 .banner-img {
-  min-height: 28rem;
+  min-height: 25rem;
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
   border-radius: 10px;
+}
+@media screen and (max-width: 1075px) {
+  .banner-img {
+    padding-bottom: 20px;
+  }
 }

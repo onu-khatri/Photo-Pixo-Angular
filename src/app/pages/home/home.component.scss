@@ -1,4 +1,21 @@
-.banner-container {
+.header_wraper {
   margin: 30px 3% 20px 3%;
+}
+
+.banner-container {
   border-radius: 8px;
+  margin-bottom: 2.5rem;
+}
+
+.slider-component {
+  margin-top: 30px;
+}
+
+.banner-btn {
+  margin-left: 50px;
+}
+@media screen and (max-width: 1075px) {
+  .banner-btn {
+    margin-left: 0px;
+  }
 }
