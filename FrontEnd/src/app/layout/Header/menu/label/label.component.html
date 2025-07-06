@@ -1,0 +1,7 @@
+<div class="menu-label">
+
+  <li>  <a [routerLinkActiveOptions]=" {exact:menu_data()?.link === '/'}" routerLinkActive="active" [routerLink]="menu_data()?.link"> {{ menu_data()?.label }} </a></li>
+  @if ((menu_data()?.children?.length || 0) > 0) {
+    <i class="fas fa-chevron-down"></i>
+  }
+</div>

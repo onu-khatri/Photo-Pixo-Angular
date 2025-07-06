@@ -1,0 +1,76 @@
+<app-slider [showcaseItems]="showcaseItems" (nextPrevEvent)="sliderChanged($event)"/>
+<p>image index = {{imageIndex()}}</p>
+<ng-template #s1>
+  <div class="template_parent">
+    <div class="template_image">
+      <img
+        src="https://500px.com/staticV2/media/explore_banner_1.982fdc43.jpg"
+        alt="sliderimage1"
+      />
+    </div>
+    <div class="template_content">
+      <h4>Why join the world's best photography community?</h4>
+      <h1>ShowCase high-quality photos</h1>
+      <p>
+        Display your photgraphy in full resolution and let every detail shine.
+        <br />
+        Share your best work with a global creative community and get inspired by stunning
+        <br />
+        imagery from around the world.
+      </p>
+      <div class="signup">
+        <app-banner-buttons></app-banner-buttons>
+      </div>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #s2>
+  <div class="template_parent">
+    <div class="template_image">
+      <img
+        src="https://500px.com/staticV2/media/explore_banner_2.bd2bb58e.jpg"
+        alt="sliderimage1"
+      />
+    </div>
+    <div class="template_content">
+      <h4>Why join the world's best photography community?</h4>
+      <h1>ShowCase high-quality photos</h1>
+      <p>
+        Join global contests, take on creative challenges, and showcase your talent.
+        <br />
+        Improve your skills, gain exposure, and win exciting prizes with PULSEpx,
+        <br />
+        Quests, and more.
+      </p>
+      <div class="signup">
+        <app-banner-buttons></app-banner-buttons>
+      </div>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #s3>
+  <div class="template_parent">
+    <div class="template_image">
+      <img
+        src="https://500px.com/staticV2/media/explore_banner_3.0c30259f.jpg"
+        alt="sliderimage1"
+      />
+    </div>
+    <div class="template_content">
+      <h4>Why join the world's best photography community?</h4>
+      <h1>Earn from your passion</h1>
+      <p>
+        License your photos through our exclusive partners and generate passive income.
+        <br />
+        Get paid for your creativity while sharing your
+        <br />
+        work with a global audience.
+      </p>
+      <div class="signup">
+        <app-banner-buttons></app-banner-buttons>
+      </div>
+    </div>
+  </div>
+</ng-template>
