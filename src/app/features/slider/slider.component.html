@@ -1,0 +1,8 @@
+<div class="slider_parent">
+  @if (currentslide()) {
+    <ng-container [ngTemplateOutlet]="currentslide()"></ng-container>
+  }
+
+  <button id="left" (click)="prev()">Prev</button>
+  <button id="right" (click)="next()">Next</button>
+</div>
