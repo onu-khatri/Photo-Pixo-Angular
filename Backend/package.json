@@ -2,10 +2,10 @@
   "name": "photopixo_bff",
   "version": "1.0.0",
   "description": "backend for photo-pixo",
-  "main": "index.js",
+  "main": "/index.ts",
   "scripts": {
     "test": "test",
-    "start": "nodemon"
+    "start": "nodemon index.ts"
   },
   "keywords": [
     "phot-pixo"
